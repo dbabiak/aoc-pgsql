@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  primary:
+    image: postgres:15
+    container_name: primary
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: tron
+      POSTGRES_USER: dmb
+      POSTGRES_DB: dmb
+    ports:
+      - 5432:5432
+    volumes:
+      - ./data:/var/lib/postgresql/data
