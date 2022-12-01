@@ -2,7 +2,7 @@
 drop table if exists xs;
 create table xs (x int);
 
-\copy xs from './src/d01.txt' with csv;
+\copy xs from './src/d01.sql.txt' with csv;
 
 with i_x as (
   select row_number() over () as rownum, * from xs

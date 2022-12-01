@@ -1,7 +1,7 @@
 drop table if exists xs;
 create table xs (x int);
 
-\copy xs from './src/d01.txt' with csv;
+\copy xs from './src/d01.sql.txt' with csv;
 
 -- select array_agg(x) from xs;
 
